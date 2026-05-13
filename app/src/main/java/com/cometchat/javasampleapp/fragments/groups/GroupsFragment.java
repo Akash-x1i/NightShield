@@ -33,6 +33,8 @@ public class GroupsFragment extends Fragment {
                 intent.putExtra("component", R.id.messages);
                 intent.putExtra(StringConstants.UID, group.getGuid());
                 intent.putExtra(StringConstants.NAME, group.getName());
+                intent.putExtra(StringConstants.AVATAR, group.getIcon());
+                intent.putExtra(StringConstants.GROUP_TYPE, group.getGroupType());
                 intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
                 startActivity(intent);
             }

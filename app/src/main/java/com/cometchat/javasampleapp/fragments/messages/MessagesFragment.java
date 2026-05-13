@@ -24,6 +24,8 @@ import com.cometchat.chatuikit.shared.views.CometChatMessageBubble.MessageBubble
 import com.cometchat.javasampleapp.R;
 import com.cometchat.javasampleapp.constants.StringConstants;
 
+import java.util.Arrays;
+
 public class MessagesFragment extends Fragment {
 
     private static final String TAG = "MessagesFragment";
@@ -92,6 +94,10 @@ public class MessagesFragment extends Fragment {
             String type = bundle.getString(StringConstants.TYPE, "");
             String name = bundle.getString(StringConstants.NAME, "");
             String avatar = bundle.getString(StringConstants.AVATAR, "");
+            String groupType = bundle.getString(StringConstants.GROUP_TYPE);
+            if (groupType == null || groupType.isEmpty()) {
+                groupType = CometChatConstants.GROUP_TYPE_PUBLIC;
+            }
 
             if (uid.isEmpty() || type.isEmpty()) {
                 Log.e(TAG, "UID or TYPE is empty");
@@ -100,22 +106,30 @@ public class MessagesFragment extends Fragment {
 
             Log.d(TAG, "Opening chat: " + uid + " type: " + type);
 
-            // Configure message request
-            MessagesRequest.MessagesRequestBuilder builder =
-                    new MessagesRequest.MessagesRequestBuilder();
+            MessagesRequest.MessagesRequestBuilder builder = new MessagesRequest.MessagesRequestBuilder();
 
-            if (CometChatConstants.RECEIVER_TYPE_USER.equals(type)) {
-                builder.setUID(uid);
-            } else {
-                builder.setGUID(uid);
-            }
+            // Explicitly set categories and types to ensure all content is loaded
+            builder.setCategories(Arrays.asList(
+                    CometChatConstants.CATEGORY_MESSAGE,
+                    CometChatConstants.CATEGORY_CUSTOM,
+                    CometChatConstants.CATEGORY_ACTION
+            ));
+
+            builder.setTypes(Arrays.asList(
+                    CometChatConstants.MESSAGE_TYPE_TEXT,
+                    CometChatConstants.MESSAGE_TYPE_IMAGE,
+                    CometChatConstants.MESSAGE_TYPE_VIDEO,
+                    CometChatConstants.MESSAGE_TYPE_AUDIO,
+                    CometChatConstants.MESSAGE_TYPE_FILE,
+                    CometChatConstants.MESSAGE_TYPE_CUSTOM
+            ));
 
             builder.setLimit(30);
+            builder.hideReplies(true);
 
             messageListConfiguration.setMessagesRequestBuilder(builder);
 
-            // IMPORTANT:
-            // Set config before user/group
+            // IMPORTANT: Set configuration before setting the user/group
             messagesView.setMessageListConfiguration(messageListConfiguration);
 
             // USER CHAT
@@ -157,8 +171,15 @@ public class MessagesFragment extends Fragment {
 
             } else {
 
-                // GROUP CHAT - Removed dummy group initialization to prevent NPE
-                // Fetch full group details from SDK before setting it to the view
+                // Initialize with basic group info immediately so messages can start loading
+                Group group = new Group();
+                group.setGuid(uid);
+                group.setName(name != null && !name.isEmpty() ? name : "Group");
+                group.setIcon(avatar);
+                group.setGroupType(groupType);
+                messagesView.setGroup(group);
+
+                // Fetch full group details from SDK to update the header and check membership
                 CometChat.getGroup(uid, new CometChat.CallbackListener<Group>() {
                     @Override
                     public void onSuccess(Group group) {
@@ -167,10 +188,24 @@ public class MessagesFragment extends Fragment {
                             return;
                         }
 
-                        Log.d(TAG, "Group fetched: " + group.getName());
+                        Log.d(TAG, "Group fetched: " + group.getName() + " Joined: " + group.isJoined());
 
                         try {
-                            messagesView.setGroup(group);
+                            if (!group.isJoined() && group.getGroupType().equalsIgnoreCase(CometChatConstants.GROUP_TYPE_PUBLIC)) {
+                                CometChat.joinGroup(group.getGuid(), group.getGroupType(), "", new CometChat.CallbackListener<Group>() {
+                                    @Override
+                                    public void onSuccess(Group joinedGroup) {
+                                        messagesView.setGroup(joinedGroup);
+                                    }
+
+                                    @Override
+                                    public void onError(CometChatException e) {
+                                        messagesView.setGroup(group);
+                                    }
+                                });
+                            } else {
+                                messagesView.setGroup(group);
+                            }
                         } catch (Exception e) {
                             Log.e(TAG, "setGroup crash: " + e.getMessage());
                         }

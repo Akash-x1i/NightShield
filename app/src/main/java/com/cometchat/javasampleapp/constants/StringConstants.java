@@ -15,5 +15,6 @@ public class StringConstants {
     public static final String NAME = "name";
     public static final String AVATAR = "avatar";
     public static final String TYPE = "type";
+    public static final String GROUP_TYPE = "group_type";
 
 }

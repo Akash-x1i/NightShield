@@ -47,6 +47,8 @@ public class ConversationsFragment extends Fragment {
                     } else {
                         intent.putExtra(StringConstants.UID, ((Group) conversation.getConversationWith()).getGuid());
                         intent.putExtra(StringConstants.NAME, ((Group) conversation.getConversationWith()).getName());
+                        intent.putExtra(StringConstants.AVATAR, ((Group) conversation.getConversationWith()).getIcon());
+                        intent.putExtra(StringConstants.GROUP_TYPE, ((Group) conversation.getConversationWith()).getGroupType());
                         intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
                     }
                 } catch (NullPointerException e) {
