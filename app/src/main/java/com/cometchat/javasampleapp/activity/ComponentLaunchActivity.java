@@ -169,6 +169,9 @@ public class ComponentLaunchActivity extends AppCompatActivity {
 
     private void loadFragment(Fragment fragment) {
         if (fragment != null) {
+            if (getIntent().getExtras() != null) {
+                fragment.setArguments(getIntent().getExtras());
+            }
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
         }
     }

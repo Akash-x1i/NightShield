@@ -35,9 +35,11 @@ public class ContactsFragment extends Fragment {
                     intent.putExtra(StringConstants.UID, user.getUid());
                     intent.putExtra(StringConstants.NAME, user.getName());
                     intent.putExtra(StringConstants.AVATAR, user.getAvatar());
+                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_USER);
                 } else if (group != null) {
                     intent.putExtra(StringConstants.UID, group.getGuid());
                     intent.putExtra(StringConstants.NAME, group.getName());
+                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
                 }
                 startActivity(intent);
             }

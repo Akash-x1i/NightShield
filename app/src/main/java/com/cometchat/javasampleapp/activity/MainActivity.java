@@ -90,7 +90,12 @@ public class MainActivity extends AppCompatActivity {
         stateMessage.setText(R.string.please_wait);
         progressBar.setVisibility(View.VISIBLE);
         Utils.setStatusBarColor(this, getResources().getColor(android.R.color.white));
-        UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder().setRegion(AppConstants.REGION).setAppId(AppConstants.APP_ID).setAuthKey(AppConstants.AUTH_KEY).subscribePresenceForAllUsers().build();
+        UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder()
+                .setRegion(AppConstants.REGION)
+                .setAppId(AppConstants.APP_ID)
+                .setAuthKey(AppConstants.AUTH_KEY)
+                .subscribePresenceForAllUsers()
+                .build();
         CometChatUIKit.init(this, uiKitSettings, new CometChat.CallbackListener<String>() {
             @Override
             public void onSuccess(String s) {

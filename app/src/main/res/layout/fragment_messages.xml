@@ -6,9 +6,8 @@
     tools:context=".fragments.messages.MessagesFragment">
 
     <com.cometchat.chatuikit.messages.CometChatMessages
-        android:id="@+id/messages"
+        android:id="@+id/messages_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/whatsapp_background" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>

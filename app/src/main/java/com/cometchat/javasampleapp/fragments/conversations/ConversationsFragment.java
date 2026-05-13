@@ -38,9 +38,11 @@ public class ConversationsFragment extends Fragment {
                     intent.putExtra(StringConstants.UID, ((User) conversation.getConversationWith()).getUid());
                     intent.putExtra(StringConstants.NAME, ((User) conversation.getConversationWith()).getName());
                     intent.putExtra(StringConstants.AVATAR, ((User) conversation.getConversationWith()).getAvatar());
+                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_USER);
                 } else {
                     intent.putExtra(StringConstants.UID, ((Group) conversation.getConversationWith()).getGuid());
                     intent.putExtra(StringConstants.NAME, ((Group) conversation.getConversationWith()).getName());
+                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
                 }
                 startActivity(intent);
             }

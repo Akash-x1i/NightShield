@@ -26,6 +26,8 @@
     <color name="whatsapp_green_tea">#25D366</color>
     <color name="whatsapp_blue_light">#34B7F1</color>
     <color name="whatsapp_background">#ECE5DD</color>
+    <color name="whatsapp_incoming_bubble">#FFFFFF</color>
+    <color name="whatsapp_outgoing_bubble">#E2FFC7</color>
 
     <color name="accent1">#ea4633</color>
     <color name="accent2">#e9527e</color>

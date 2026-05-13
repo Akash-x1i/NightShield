@@ -14,5 +14,6 @@ public class StringConstants {
     public static final String UID = "uid";
     public static final String NAME = "name";
     public static final String AVATAR = "avatar";
+    public static final String TYPE = "type";
 
 }

@@ -14,13 +14,35 @@ import com.cometchat.chatuikit.shared.resources.utils.Utils;
 import com.cometchat.chat.core.CometChat;
 
 
+import com.cometchat.chatuikit.shared.cometchatuikit.CometChatUIKit;
+import com.cometchat.chatuikit.shared.cometchatuikit.UIKitSettings;
+import com.cometchat.chat.exceptions.CometChatException;
+
 public class Application extends android.app.Application {
     private static String LISTENER_ID;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        addCallListener();
+        
+        UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder()
+                .setRegion(AppConstants.REGION)
+                .setAppId(AppConstants.APP_ID)
+                .setAuthKey(AppConstants.AUTH_KEY)
+                .subscribePresenceForAllUsers()
+                .build();
+
+        CometChatUIKit.init(this, uiKitSettings, new CometChat.CallbackListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                addCallListener();
+            }
+
+            @Override
+            public void onError(CometChatException e) {
+            }
+        });
+
         if (AppUtils.isNightMode(this)) {
             Palette.getInstance().mode(CometChatTheme.MODE.DARK);
         }
