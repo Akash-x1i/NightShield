@@ -13,6 +13,8 @@ import com.cometchat.chatuikit.conversations.CometChatConversations;
 import com.cometchat.chat.models.Conversation;
 import com.cometchat.javasampleapp.activity.ComponentLaunchActivity;
 import android.content.Intent;
+import android.widget.Toast;
+
 import com.cometchat.javasampleapp.constants.StringConstants;
 import com.cometchat.chat.models.User;
 import com.cometchat.chat.models.Group;
@@ -34,17 +36,25 @@ public class ConversationsFragment extends Fragment {
             public void OnItemClick(Conversation conversation, int index) {
                 Intent intent = new Intent(getContext(), ComponentLaunchActivity.class);
                 intent.putExtra("component", R.id.messages);
-                if (conversation.getConversationType().equals(com.cometchat.chat.constants.CometChatConstants.CONVERSATION_TYPE_USER)) {
-                    intent.putExtra(StringConstants.UID, ((User) conversation.getConversationWith()).getUid());
-                    intent.putExtra(StringConstants.NAME, ((User) conversation.getConversationWith()).getName());
-                    intent.putExtra(StringConstants.AVATAR, ((User) conversation.getConversationWith()).getAvatar());
-                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_USER);
-                } else {
-                    intent.putExtra(StringConstants.UID, ((Group) conversation.getConversationWith()).getGuid());
-                    intent.putExtra(StringConstants.NAME, ((Group) conversation.getConversationWith()).getName());
-                    intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
+
+                try {
+                    String converString = conversation.getConversationType();
+                    if (converString.equals(com.cometchat.chat.constants.CometChatConstants.CONVERSATION_TYPE_USER)) {
+                        intent.putExtra(StringConstants.UID, ((User) conversation.getConversationWith()).getUid());
+                        intent.putExtra(StringConstants.NAME, ((User) conversation.getConversationWith()).getName());
+                        intent.putExtra(StringConstants.AVATAR, ((User) conversation.getConversationWith()).getAvatar());
+                        intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_USER);
+                    } else {
+                        intent.putExtra(StringConstants.UID, ((Group) conversation.getConversationWith()).getGuid());
+                        intent.putExtra(StringConstants.NAME, ((Group) conversation.getConversationWith()).getName());
+                        intent.putExtra(StringConstants.TYPE, com.cometchat.chat.constants.CometChatConstants.RECEIVER_TYPE_GROUP);
+                    }
+                } catch (NullPointerException e) {
+
+                } finally {
+                    startActivity(intent);
+
                 }
-                startActivity(intent);
             }
         });
         return view;

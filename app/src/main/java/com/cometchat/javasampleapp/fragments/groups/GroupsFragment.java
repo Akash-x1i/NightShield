@@ -37,6 +37,15 @@ public class GroupsFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        view.findViewById(R.id.create_group_fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ComponentLaunchActivity.class);
+                intent.putExtra("component", R.id.create_group);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
