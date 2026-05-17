@@ -5,24 +5,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:background="@color/push_black"
     android:orientation="vertical"
     tools:ignore="MissingDefaultResource">
 
     <RelativeLayout
         android:id="@+id/parent_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/push_badge_purple_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/badgeLayout"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@drawable/push_badge_purple_bg"
+                android:backgroundTint="@color/push_purple_400"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join Network"
+                android:textColor="@color/push_purple_400"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:textAllCaps="true" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:padding="4dp"
-            android:text="SignUp"
-            android:textColor="@color/cometchat_primary_text_color"
-            android:textSize="40sp"
+            android:layout_below="@id/badgeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Night Shield"
+            android:textColor="@color/push_text_primary"
+            android:textSize="32sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -31,122 +65,143 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvTitle"
-            android:layout_marginStart="16dp"
-            android:padding="4dp"
-            android:text="Welcome to \nCometChat"
-            android:textColor="@color/cometchat_color_primary"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text=" "
+            android:textColor="@color/push_purple_500"
             android:textStyle="bold" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvDes2"
             style="@style/TextAppearance.AppCompat.Body1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvDes1"
-            android:layout_marginStart="16dp"
-            android:padding="4dp"
-            android:text="Please Enter below details to continue"
-            android:textColor="@color/cometchat_primary_text_color"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Join the global social network"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/push_text_secondary"
             android:textStyle="normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvDes2"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/push_card_bg"
+            android:padding="28dp"
             android:animateLayoutChanges="true"
             android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Account"
+                android:textColor="@color/push_text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USER UID"
+                android:textSize="12sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/push_text_secondary"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputUID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/app_background"
-                android:hint="Enter UID"
-                app:boxBackgroundMode="filled"
-                app:boxCornerRadiusBottomEnd="16dp"
-                app:boxCornerRadiusBottomStart="16dp"
-                app:boxCornerRadiusTopEnd="16dp"
-                app:boxCornerRadiusTopStart="16dp"
-                app:boxStrokeColor="@color/cometchat_secondary_text_color"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:endIconTint="@color/cometchat_primary_text_color"
-                app:hintTextColor="@color/black">
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etUID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@drawable/push_input_bg"
                     android:imeOptions="actionDone"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:padding="16dp"
-                    android:textColor="@color/cometchat_primary_text_color" />
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="e.g. 0x1234...abcd"
+                    android:textColorHint="@color/push_text_muted"
+                    android:textColor="@color/push_text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FULL NAME"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/push_text_secondary"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@color/app_background"
-                android:hint="Enter Name"
-                app:boxBackgroundMode="filled"
-                app:boxCornerRadiusBottomEnd="16dp"
-                app:boxCornerRadiusBottomStart="16dp"
-                app:boxCornerRadiusTopEnd="16dp"
-                app:boxCornerRadiusTopStart="16dp"
-                app:boxStrokeColor="@color/cometchat_secondary_text_color"
-                app:boxStrokeWidth="0dp"
-                app:boxStrokeWidthFocused="0dp"
-                app:endIconTint="@color/cometchat_primary_text_color"
-                app:hintTextColor="@color/black">
+                app:hintEnabled="false"
+                app:boxBackgroundMode="none">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
+                    android:background="@drawable/push_input_bg"
                     android:imeOptions="actionDone"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:padding="16dp"
-                    android:textColor="@color/cometchat_primary_text_color" />
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:hint="Enter Name"
+                    android:textColorHint="@color/push_text_muted"
+                    android:textColor="@color/push_text_primary" />
             </com.google.android.material.textfield.TextInputLayout>
 
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="16dp"
-            android:background="@android:color/transparent">
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/createUserBtn"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/curved_blue_button"
-                android:text="Create User"
-                android:textColor="@color/white"
-                app:elevation="0dp"
-                app:rippleColor="@color/cometchat_light_grey" />
+                android:layout_marginTop="32dp"
+                android:background="@android:color/transparent">
 
-            <ProgressBar
-                android:id="@+id/createUserPb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/createUserBtn"
-                android:elevation="8dp"
-                android:indeterminateTint="@color/white"
-                android:visibility="gone"
-                tools:visibility="visible" />
-        </RelativeLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/createUserBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/push_btn_primary"
+                    android:text="Start Building"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:padding="14dp"
+                    android:letterSpacing="0.01"
+                    android:textColor="@color/push_white"
+                    app:elevation="0dp" />
+
+                <ProgressBar
+                    android:id="@+id/createUserPb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:elevation="8dp"
+                    android:indeterminateTint="@color/push_white"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </RelativeLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 </ScrollView>

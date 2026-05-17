@@ -62,24 +62,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         parentView = findViewById(R.id.parent_view);
-        progressBar = findViewById(R.id.progress_bar);
-        stateMessage = findViewById(R.id.state_message);
-        stateLayout = findViewById(R.id.state_layout);
-        gridLayoutContainer = findViewById(R.id.grid_layout_container);
-        user1 = findViewById(R.id.user1);
-        user2 = findViewById(R.id.user2);
-        user3 = findViewById(R.id.user3);
-        user4 = findViewById(R.id.user4);
-        ivLogo = findViewById(R.id.ivLogo);
-        tvCometChat = findViewById(R.id.tvComet);
-        user1Name = findViewById(R.id.user1_name);
-        user2Name = findViewById(R.id.user2_name);
-        user3Name = findViewById(R.id.user3_name);
-        user4Name = findViewById(R.id.user4_name);
-        user1Avatar = findViewById(R.id.user1_avatar_image);
-        user2Avatar = findViewById(R.id.user2_avatar_image);
-        user3Avatar = findViewById(R.id.user3_avatar_image);
-        user4Avatar = findViewById(R.id.user4_avatar_image);
 
         user1.setVisibility(View.GONE);
         user2.setVisibility(View.GONE);
@@ -134,22 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.login).setOnClickListener(view -> startActivity(new Intent(MainActivity.this, LoginActivity.class)));
 
-        user1.setOnClickListener(view -> {
-            findViewById(R.id.user1Progressbar).setVisibility(View.VISIBLE);
-            login(user1.getTag().toString());
-        });
-        user2.setOnClickListener(view -> {
-            findViewById(R.id.user2Progressbar).setVisibility(View.VISIBLE);
-            login(user2.getTag().toString());
-        });
-        user3.setOnClickListener(view -> {
-            findViewById(R.id.user3Progressbar).setVisibility(View.VISIBLE);
-            login(user3.getTag().toString());
-        });
-        user4.setOnClickListener(view -> {
-            findViewById(R.id.user4Progressbar).setVisibility(View.VISIBLE);
-            login(user4.getTag().toString());
-        });
+
 
         if (Utils.isDarkMode(this)) {
             ivLogo.setImageTintList(ColorStateList.valueOf(getResources().getColor(R.color.white)));
