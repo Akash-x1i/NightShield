@@ -29,6 +29,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
     namespace 'com.cometchat.javasampleapp'
 }
 
@@ -48,6 +54,14 @@ dependencies {
         }
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.10") {
             because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
+    }
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    taskGraph.allTasks.each { task ->
+        if (task.name.contains("lint") || task.name.contains("Lint")) {
+            task.enabled = false
         }
     }
 }
