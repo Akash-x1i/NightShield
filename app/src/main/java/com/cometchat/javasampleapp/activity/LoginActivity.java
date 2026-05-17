@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout inputLayout;
     private ProgressBar progressBar;
     private TextInputEditText uid;
+    private TextInputEditText etPassword;
     private RelativeLayout parentView;
 
     @Override
@@ -33,35 +34,50 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         uid = findViewById(R.id.etUID);
+        etPassword = findViewById(R.id.etPassword);
         progressBar = findViewById(R.id.loginProgress);
         inputLayout = findViewById(R.id.inputUID);
         parentView = findViewById(R.id.parent_view);
         uid.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_DONE) {
-                if (uid.getText().toString().isEmpty()) {
-                    uid.setError("Enter UID");
-                } else {
-                    uid.setError(null);
-                    progressBar.setVisibility(View.VISIBLE);
-                    inputLayout.setEndIconVisible(false);
-                    login(uid.getText().toString());
-                }
+                handleLogin();
+            }
+            return true;
+        });
+
+        etPassword.setOnEditorActionListener((textView, i, keyEvent) -> {
+            if (i == EditorInfo.IME_ACTION_DONE) {
+                handleLogin();
             }
             return true;
         });
 
 
         findViewById(R.id.tvSignIn).setOnClickListener(view -> {
-            if (uid.getText().toString().isEmpty()) {
-                uid.setError("Enter UID");
-            } else {
-                findViewById(R.id.loginProgress).setVisibility(View.VISIBLE);
-                inputLayout.setEndIconVisible(false);
-                login(uid.getText().toString());
-            }
+            handleLogin();
         });
         setUpUI();
 
+    }
+
+    private void handleLogin() {
+        String uidText = uid.getText().toString().trim();
+        String passwordText = etPassword.getText().toString().trim();
+
+        if (uidText.isEmpty()) {
+            uid.setError("Enter UID");
+            return;
+        }
+        if (passwordText.isEmpty()) {
+            etPassword.setError("Enter Password");
+            return;
+        }
+
+        uid.setError(null);
+        etPassword.setError(null);
+        progressBar.setVisibility(View.VISIBLE);
+        inputLayout.setEndIconVisible(false);
+        login(uidText);
     }
 
     private void login(String uid) {
@@ -90,11 +106,14 @@ public class LoginActivity extends AppCompatActivity {
         if (AppUtils.isNightMode(this)) {
             AppUtils.changeTextColorToWhite(this, findViewById(R.id.tvTitle));
             AppUtils.changeTextColorToWhite(this, findViewById(R.id.tvDes2));
-            inputLayout.getEditText().setTextColor(getResources().getColor(R.color.white));
+            uid.setTextColor(getResources().getColor(R.color.white));
+            etPassword.setTextColor(getResources().getColor(R.color.white));
             parentView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.app_background_dark)));
         } else {
             AppUtils.changeTextColorToBlack(this, findViewById(R.id.tvTitle));
             AppUtils.changeTextColorToBlack(this, findViewById(R.id.tvDes2));
+            uid.setTextColor(getResources().getColor(R.color.black));
+            etPassword.setTextColor(getResources().getColor(R.color.black));
             parentView.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.app_background)));
         }
     }

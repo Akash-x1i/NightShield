@@ -16,67 +16,37 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/push_badge_purple_bg"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:paddingTop="6dp"
-            android:paddingBottom="6dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="24dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <View
-                android:layout_width="6dp"
-                android:layout_height="6dp"
-                android:background="@drawable/push_badge_purple_bg"
-                android:backgroundTint="@color/push_purple_400"
-                android:layout_marginEnd="6dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="NightShield Access"
-                android:textColor="@color/push_purple_400"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.06"
-                android:textAllCaps="true" />
-        </LinearLayout>
-
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivLogo"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:src="@drawable/cometchat_white"
+            android:src="@drawable/logo"
             app:tint="@color/push_purple_500" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvComet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Global Chat Network"
+            android:layout_marginBottom="16dp"
             android:gravity="center"
+            android:letterSpacing="0.01"
+            android:text="Night Shield"
             android:textColor="@color/push_text_primary"
             android:textSize="36sp"
             android:textStyle="bold"
-            android:letterSpacing="-0.03"
-            android:layout_marginBottom="16dp" />
+            app:fontFamily="@font/cinzel" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Auth once. Reach users on any location"
+            android:layout_marginBottom="40dp"
             android:gravity="center"
-            android:textColor="@color/push_text_secondary"
-            android:textSize="15sp"
             android:lineSpacingMultiplier="1.2"
-            android:layout_marginBottom="40dp" />
+            android:text="Privacy Focused Chat And More"
+            android:textColor="@color/push_text_secondary"
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -88,33 +58,35 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:text="Sign In"
+                android:textAlignment="center"
                 android:textColor="@color/push_text_primary"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Authenticate your session to network seemlessly."
-                android:textColor="@color/push_text_secondary"
-                android:textSize="14sp"
+                android:layout_marginBottom="24dp"
                 android:lineSpacingMultiplier="1.4"
-                android:layout_marginBottom="24dp" />
+                android:text="Already have an Account?"
+                android:textAlignment="center"
+                android:textColor="@color/push_text_secondary"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/push_btn_primary"
+                android:letterSpacing="0.01"
                 android:padding="14dp"
-                android:text="Login using UID"
+                android:text="Sign in to your account"
                 android:textAllCaps="false"
                 android:textColor="@color/push_white"
                 android:textSize="15sp"
-                android:textStyle="bold"
-                android:letterSpacing="0.01" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -135,8 +107,8 @@
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/push_text_secondary"
-                android:text="Don't have any users?" />
+                android:text="Don't have an Account?"
+                android:textColor="@color/push_text_secondary" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/create_user"

@@ -24,6 +24,7 @@ import com.google.android.material.textfield.TextInputEditText;
 public class CreateUserActivity extends AppCompatActivity {
     private TextInputEditText uid;
     private TextInputEditText name;
+    private TextInputEditText etPassword;
     private AppCompatButton createUserBtn;
     private ProgressBar progressBar;
 
@@ -37,6 +38,7 @@ public class CreateUserActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.createUserPb);
         uid = findViewById(R.id.etUID);
         name = findViewById(R.id.etName);
+        etPassword = findViewById(R.id.etPassword);
         createUserBtn = findViewById(R.id.createUserBtn);
         createUserBtn.setTextColor(getResources().getColor(R.color.white));
         createUserBtn.setOnClickListener(v -> {
@@ -44,6 +46,8 @@ public class CreateUserActivity extends AppCompatActivity {
                 uid.setError(getResources().getString(R.string.fill_this_field));
             else if (name.getText().toString().isEmpty())
                 name.setError(getResources().getString(R.string.fill_this_field));
+            else if (etPassword.getText().toString().isEmpty())
+                etPassword.setError(getResources().getString(R.string.fill_this_field));
             else {
                 progressBar.setVisibility(View.VISIBLE);
                 createUserBtn.setClickable(false);
@@ -94,10 +98,14 @@ public class CreateUserActivity extends AppCompatActivity {
             AppUtils.changeTextColorToWhite(this, findViewById(R.id.tvDes2));
             uid.setTextColor(getResources().getColor(R.color.white));
             name.setTextColor(getResources().getColor(R.color.white));
+            etPassword.setTextColor(getResources().getColor(R.color.white));
             parentView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.app_background_dark)));
         } else {
             AppUtils.changeTextColorToBlack(this, findViewById(R.id.tvTitle));
             AppUtils.changeTextColorToBlack(this, findViewById(R.id.tvDes2));
+            uid.setTextColor(getResources().getColor(R.color.black));
+            name.setTextColor(getResources().getColor(R.color.black));
+            etPassword.setTextColor(getResources().getColor(R.color.black));
             parentView.setBackgroundTintList(ColorStateList.valueOf(getResources().getColor(R.color.app_background)));
         }
     }

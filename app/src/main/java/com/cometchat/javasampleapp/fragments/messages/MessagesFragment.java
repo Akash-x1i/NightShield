@@ -1,6 +1,7 @@
 package com.cometchat.javasampleapp.fragments.messages;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -90,16 +91,17 @@ public class MessagesFragment extends Fragment {
                 return view;
             }
 
-            String uid = bundle.getString(StringConstants.UID, "");
-            String type = bundle.getString(StringConstants.TYPE, "");
-            String name = bundle.getString(StringConstants.NAME, "");
-            String avatar = bundle.getString(StringConstants.AVATAR, "");
+            String uid = bundle.getString(StringConstants.UID);
+            String type = bundle.getString(StringConstants.TYPE);
+            String name = bundle.getString(StringConstants.NAME);
+            String avatar = bundle.getString(StringConstants.AVATAR);
             String groupType = bundle.getString(StringConstants.GROUP_TYPE);
-            if (groupType == null || groupType.isEmpty()) {
+
+            if (TextUtils.isEmpty(groupType)) {
                 groupType = CometChatConstants.GROUP_TYPE_PUBLIC;
             }
 
-            if (uid.isEmpty() || type.isEmpty()) {
+            if (TextUtils.isEmpty(uid) || TextUtils.isEmpty(type)) {
                 Log.e(TAG, "UID or TYPE is empty");
                 return view;
             }
@@ -174,7 +176,7 @@ public class MessagesFragment extends Fragment {
                 // Initialize with basic group info immediately so messages can start loading
                 Group group = new Group();
                 group.setGuid(uid);
-                group.setName(name != null && !name.isEmpty() ? name : "Group");
+                group.setName(!TextUtils.isEmpty(name) ? name : "Group");
                 group.setIcon(avatar);
                 group.setGroupType(groupType);
                 messagesView.setGroup(group);
