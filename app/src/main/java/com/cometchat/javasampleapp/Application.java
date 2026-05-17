@@ -25,6 +25,9 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
         
+        AppUtils.switchDarkMode();
+        Palette.getInstance().mode(CometChatTheme.MODE.DARK);
+
         UIKitSettings uiKitSettings = new UIKitSettings.UIKitSettingsBuilder()
                 .setRegion(AppConstants.REGION)
                 .setAppId(AppConstants.APP_ID)
@@ -43,9 +46,6 @@ public class Application extends android.app.Application {
             }
         });
 
-        if (AppUtils.isNightMode(this)) {
-            Palette.getInstance().mode(CometChatTheme.MODE.DARK);
-        }
     }
 
     private void addCallListener() {
@@ -81,13 +81,8 @@ public class Application extends android.app.Application {
     }
 
     private void setTheme() {
-        if (AppUtils.isNightMode(this)) {
-            Palette.getInstance().mode(CometChatTheme.MODE.DARK);
-            AppUtils.switchDarkMode();
-        } else {
-            Palette.getInstance().mode(CometChatTheme.MODE.LIGHT);
-            AppUtils.switchLightMode();
-        }
+        Palette.getInstance().mode(CometChatTheme.MODE.DARK);
+        AppUtils.switchDarkMode();
     }
 
     @Override

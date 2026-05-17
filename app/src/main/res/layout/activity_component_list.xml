@@ -57,6 +57,9 @@
                 android:visibility="gone">
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="visible"
@@ -114,6 +117,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -173,6 +179,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -240,6 +249,9 @@
                 android:visibility="gone">
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
@@ -298,6 +310,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -357,6 +372,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -425,6 +443,9 @@
                 android:visibility="gone">
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="visible"
@@ -482,6 +503,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -542,6 +566,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -602,6 +629,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -659,6 +689,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -716,6 +749,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -773,6 +809,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -830,6 +869,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -887,6 +929,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -953,6 +998,9 @@
                 android:visibility="gone">
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
@@ -1011,6 +1059,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1070,6 +1121,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1129,6 +1183,9 @@
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1184,6 +1241,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1249,6 +1309,9 @@
                 android:visibility="gone">
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -1304,6 +1367,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1359,6 +1425,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1415,6 +1484,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1470,6 +1542,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1525,6 +1600,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1580,6 +1658,9 @@
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="-20dp"
@@ -1653,6 +1734,9 @@
                     android:text="Resources" />
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
@@ -1716,7 +1800,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -1770,7 +1854,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -1794,7 +1878,7 @@
                                     android:layout_height="30dp"
                                     android:layout_gravity="center_vertical"
                                     android:src="@drawable/cometchat_ic_translate"
-                                    app:tint="@color/black"
+                                    app:tint="@color/push_text_primary"
                                      />
 
                                 <TextView
@@ -1838,6 +1922,9 @@
                     android:text="Views" />
 
                 <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
@@ -1901,7 +1988,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -1956,7 +2043,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2011,7 +2098,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2067,7 +2154,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2123,7 +2210,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2179,7 +2266,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2235,7 +2322,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2291,7 +2378,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 
@@ -2347,7 +2434,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
                         <LinearLayout
@@ -2402,7 +2489,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
                         <LinearLayout
@@ -2457,7 +2544,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
                         <LinearLayout
@@ -2512,7 +2599,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
                         <LinearLayout
@@ -2567,7 +2654,7 @@
                                 android:layout_marginStart="40dp"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginEnd="40dp"
-                                android:background="@color/app_background" />
+                                android:background="@color/push_black" />
 
                         </LinearLayout>
 

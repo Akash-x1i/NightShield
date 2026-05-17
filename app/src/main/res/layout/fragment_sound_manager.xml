@@ -9,6 +9,9 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -29,7 +32,7 @@
                 android:layout_gravity="center"
                 android:text="Sound Manager"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/black"
+                android:textColor="@color/push_text_primary"
                 android:textStyle="bold" />
 
             <TextView
@@ -55,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Incoming Messages"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/push_text_primary" />
 
                 <Space
                     android:layout_width="0dp"
@@ -68,12 +71,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvSignIn"
                     android:background="@drawable/curved_blue_button"
-                    android:backgroundTint="@color/app_background"
+                    android:backgroundTint="@color/push_black"
                     android:fontFamily="@font/amethysta"
                     android:text="Play"
                     android:textAllCaps="false"
                     android:padding="8dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/push_text_primary"
                     android:textSize="13sp"
                     app:rippleColor="@color/cometchat_light_grey" />
             </LinearLayout>
@@ -91,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Outgoing Messages"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/push_text_primary" />
                 <Space
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -102,12 +105,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvSignIn"
                     android:background="@drawable/curved_blue_button"
-                    android:backgroundTint="@color/app_background"
+                    android:backgroundTint="@color/push_black"
                     android:fontFamily="@font/amethysta"
                     android:text="Play"
                     android:textAllCaps="false"
                     android:padding="8dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/push_text_primary"
                     android:textSize="13sp"
                     app:rippleColor="@color/cometchat_light_grey" />
             </LinearLayout>

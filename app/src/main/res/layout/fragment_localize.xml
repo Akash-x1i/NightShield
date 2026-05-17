@@ -9,6 +9,9 @@
 
 
     <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
@@ -55,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/language_english"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/push_text_primary" />
 
                 <Space
                     android:layout_width="0dp"
@@ -87,7 +90,7 @@
                         android:checked="true"
                         android:gravity="center"
                         android:text="English"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/push_text_primary" />
 
                     <RadioButton
                         android:id="@+id/hindi"
@@ -101,7 +104,7 @@
                         android:button="@null"
                         android:gravity="center"
                         android:text="@string/hindi"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/push_text_primary" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -113,7 +116,7 @@
                 android:textAllCaps="false"
                 android:background="@drawable/curved_blue_button"
                 android:text="@string/view_english"
-                android:textColor="@color/white" />
+                android:textColor="@color/push_white" />
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>

@@ -8,6 +8,9 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -63,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Status"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/push_text_primary" />
 
                 <Space
                     android:layout_width="0dp"
@@ -95,7 +98,7 @@
                         android:checked="true"
                         android:gravity="center"
                         android:text="Online"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/push_text_primary" />
 
                     <RadioButton
                         android:id="@+id/offline"
@@ -109,7 +112,7 @@
                         android:button="@null"
                         android:gravity="center"
                         android:text="Offline"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/push_text_primary" />
                 </RadioGroup>
 
             </LinearLayout>

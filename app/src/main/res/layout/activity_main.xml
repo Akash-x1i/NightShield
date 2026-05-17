@@ -60,7 +60,7 @@
             android:id="@+id/tvComet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Universal Layer 1\nfor Every Chain"
+            android:text="Global Chat Network"
             android:gravity="center"
             android:textColor="@color/push_text_primary"
             android:textSize="36sp"
@@ -71,7 +71,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Deploy once. Reach users on any chain. Use any wallet."
+            android:text="Auth once. Reach users on any location"
             android:gravity="center"
             android:textColor="@color/push_text_secondary"
             android:textSize="15sp"
@@ -97,7 +97,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Authenticate your session to manage and build seamlessly."
+                android:text="Authenticate your session to network seemlessly."
                 android:textColor="@color/push_text_secondary"
                 android:textSize="14sp"
                 android:lineSpacingMultiplier="1.4"

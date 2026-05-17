@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/push_black"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parent_view"
@@ -17,7 +18,7 @@
         android:text="Message Receipt"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/black" />
+        android:textColor="@color/push_text_primary" />
 
     <TextView
         android:id="@+id/message_receipt_text_desc"
@@ -38,6 +39,9 @@
             android:orientation="vertical">
 
             <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -57,7 +61,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="Progress State"
-                        android:textColor="@color/black"
+                        android:textColor="@color/push_text_primary"
                         android:textStyle="bold" />
 
                     <com.cometchat.chatuikit.shared.views.CometChatReceipt.CometChatReceipt
@@ -71,6 +75,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -90,7 +97,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="Sent Receipt"
-                        android:textColor="@color/black"
+                        android:textColor="@color/push_text_primary"
                         android:textStyle="bold" />
 
                     <com.cometchat.chatuikit.shared.views.CometChatReceipt.CometChatReceipt
@@ -104,6 +111,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -123,7 +133,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="Deliver Receipt"
-                        android:textColor="@color/black"
+                        android:textColor="@color/push_text_primary"
                         android:textStyle="bold" />
 
                     <com.cometchat.chatuikit.shared.views.CometChatReceipt.CometChatReceipt
@@ -137,6 +147,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -156,7 +169,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="Read Receipt"
-                        android:textColor="@color/black"
+                        android:textColor="@color/push_text_primary"
                         android:textStyle="bold" />
 
                     <com.cometchat.chatuikit.shared.views.CometChatReceipt.CometChatReceipt
@@ -170,6 +183,9 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+        app:cardBackgroundColor="@color/push_card"
+        app:strokeColor="@color/push_border"
+        app:strokeWidth="1dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
@@ -189,7 +205,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:text="Error State"
-                        android:textColor="@color/black"
+                        android:textColor="@color/push_text_primary"
                         android:textStyle="bold" />
 
                     <com.cometchat.chatuikit.shared.views.CometChatReceipt.CometChatReceipt

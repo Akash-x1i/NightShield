@@ -143,18 +143,18 @@ public class HomeActivity extends AppCompatActivity {
             AppUtils.changeIconTintToWhite(this, darkMode);
             AppUtils.changeIconTintToWhite(this, lightMode);
             AppUtils.changeIconTintToWhite(this, logout);
-            Utils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.app_background_dark));
-            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.app_background_dark));
-            bottomNavigationView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.app_background_dark)));
+            Utils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.push_black));
+            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.push_card));
+            bottomNavigationView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.push_card)));
             darkMode.setVisibility(View.GONE);
             lightMode.setVisibility(View.VISIBLE);
         } else {
             AppUtils.changeIconTintToWhite(this, darkMode);
             AppUtils.changeIconTintToWhite(this, lightMode);
             AppUtils.changeIconTintToWhite(this, logout);
-            Utils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.whatsapp_green));
-            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.whatsapp_green));
-            bottomNavigationView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white)));
+            Utils.setStatusBarColor(this, ContextCompat.getColor(this, R.color.push_black));
+            toolbar.setBackgroundColor(ContextCompat.getColor(this, R.color.push_card));
+            bottomNavigationView.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.push_card)));
             darkMode.setVisibility(View.VISIBLE);
             lightMode.setVisibility(View.GONE);
         }

@@ -5,26 +5,29 @@
     android:id="@+id/parent_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/push_black"
     tools:context=".activity.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/whatsapp_green"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            android:background="@color/push_card"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WhatsApp"
-                android:textColor="@color/white"
+                android:text="NightShield"
+                android:textColor="@color/push_text_primary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -41,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_dark_mode"
-                    app:tint="@color/white" />
+                    app:tint="@color/push_purple_400" />
 
                 <ImageView
                     android:id="@+id/light_mode"
@@ -50,7 +53,7 @@
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_light_mode"
                     android:visibility="gone"
-                    app:tint="@color/white" />
+                    app:tint="@color/push_purple_400" />
 
                 <ImageView
                     android:id="@+id/logout"
@@ -58,10 +61,16 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_logout"
-                    app:tint="@color/white" />
+                    app:tint="@color/push_purple_400" />
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/push_border" />
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
@@ -76,9 +85,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemIconTint="@color/bottom_nav_selector"
-        app:itemTextColor="@color/bottom_nav_selector"
+        android:background="@color/push_card"
+        app:itemIconTint="@color/push_bottom_nav_selector"
+        app:itemTextColor="@color/push_bottom_nav_selector"
         app:menu="@menu/bottom_navigation_menu" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -89,7 +98,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         android:src="@drawable/compose"
-        app:backgroundTint="@color/whatsapp_green_tea"
-        app:tint="@color/white" />
+        app:backgroundTint="@color/push_purple_500"
+        app:tint="@color/push_white" />
 
 </RelativeLayout>
